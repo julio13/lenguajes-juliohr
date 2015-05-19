@@ -16,7 +16,7 @@ public class LenguajesJuliohr {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("mi primer proyecto");
+        System.out.println("mi primer proyecto con esta cosa tan bonita");
     }
     
 }
