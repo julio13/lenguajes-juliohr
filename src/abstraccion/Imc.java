@@ -14,6 +14,7 @@ public class Imc {
     float altura;
     
     public Imc(float p, float a){
+<<<<<<< HEAD
         peso=p;
         altura=a;
         
@@ -27,4 +28,14 @@ public class Imc {
     
     }
     
+=======
+    peso=p;
+    altura=a;
+            }
+    public String calcular(){
+        float imc=peso/(altura*altura);
+      return  "tu pewso es:"+imc;
+
+    }
+>>>>>>> origin/master
 }
