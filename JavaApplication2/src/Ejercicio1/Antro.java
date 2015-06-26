@@ -20,6 +20,12 @@ public class Antro {
         
         Usuario u=new Usuario("juan",42,"jcampos@gmail.com", d1);
         System.out.println(u.getDireccion().getMunicipio());
+                Bebida bebida=new Bebida();
+               bebida.setTipo("alcoholicas");
+                String[]reco=bebida.obtenerRecomendaciones();
+                for(String be:reco){
+                    System.out.println("Bebida:"+be);
+                }
                 
     }
     
