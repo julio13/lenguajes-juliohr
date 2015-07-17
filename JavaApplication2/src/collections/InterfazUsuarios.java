@@ -5,6 +5,10 @@
  */
 package collections;
 
+import java.util.Collections;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author T-107
@@ -44,15 +48,15 @@ public class InterfazUsuarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("Nombre");
 
         jTextField1.setText("jTextField1");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("Edad");
 
         jTextField2.setText("jTextField2");
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("email");
 
         jTextField3.setText("jTextField3");
 
@@ -136,9 +140,6 @@ public class InterfazUsuarios extends javax.swing.JFrame {
 
         TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -192,7 +193,21 @@ public class InterfazUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_botonguardarActionPerformed
 
     private void BotonCargarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarUsuarioActionPerformed
-        // TODO add your handling code here:
+
+  // TODO add your handling code here:
+        GeneradorDeUsuarios gen=new GeneradorDeUsuarios();
+        List<Usuario>usuarios=gen.getUsuarios();
+        Collections.sort(usuarios, new UsuarioPorNombre());
+        TablaUsuarios.setModel(new DefaultTableModel(new String[]{"Nombre","edad","email"},gen.getUsuarios().size()));
+        int fila=0;
+        for(Usuario u:usuarios){
+            TablaUsuarios.setValueAt(u.getNombre(), fila, 0);
+            TablaUsuarios.setValueAt(u.getEdad(), fila, 1);
+            TablaUsuarios.setValueAt(u.getEmail(), fila, 2);
+            fila ++;
+        }
+        
+        
     }//GEN-LAST:event_BotonCargarUsuarioActionPerformed
 
     /**
