@@ -16,7 +16,7 @@ public class InterfazComprensora {
     public static void main(String[] args) {
         //primero creamos un animal
         Animal a=new Animal();
-        a.setNombre("Leon");
+        a.setNombre("Delfin");
         a.setCarnivoro(true);
         ModeloPersistenciaAnimal modelo= new ModeloPersistenciaAnimal();
         try {
