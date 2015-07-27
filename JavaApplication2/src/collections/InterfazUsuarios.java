@@ -236,6 +236,7 @@ public class InterfazUsuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
         BotonCargarUsuario.setEnabled(true);
         int indice=comboSeleccion.getSelectedIndex();
+        
     }//GEN-LAST:event_comboSeleccionActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
