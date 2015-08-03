@@ -4,47 +4,18 @@
  * and open the template in the editor.
  */
 package concurrencia;
-import java.util.Calendar;
+
 /**
  *
- * @author T-107
+ * @author Miguel
  */
-public class InterfazHora extends javax.swing.JFrame {
-int x=300;
-        int y=200;
-    /**
-     * Creates new form InterfazHora
-     */
-    public InterfazHora() {
-        initComponents();
-         jLabel1.setText("Hola");
-         Thread t1=new Thread(new Runnable(){
+public class ProyectoFinalV1 extends javax.swing.JFrame {
 
-           @Override
-           public void run() {
-               
-                while(true){
-        try{
-            Thread.sleep(1000);
-            setSize(x,y);
-            //Vamos a crear un relojito chafa2
-            Calendar cal=Calendar.getInstance();
-            int hora=cal.get(Calendar.HOUR);
-            int minutos=cal.get(Calendar.MINUTE);
-            int segundos=cal.get(Calendar.SECOND);
-            int dia=cal.get(Calendar.DATE);
-            String horaa=(hora+":"+minutos+":"+segundos);
-            jLabel1.setText(horaa);
-            //if(minutos==59)dispose();
-            x=x+2;
-            y=y+2;
-        }catch(Exception e){
-        }
-        }
-           }
-           
-       });
-       t1.start();
+    /**
+     * Creates new form ProyectoFinalV1
+     */
+    public ProyectoFinalV1() {
+        initComponents();
     }
 
     /**
@@ -56,24 +27,17 @@ int x=300;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 119, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -96,25 +60,24 @@ int x=300;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazHora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoFinalV1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazHora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoFinalV1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazHora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoFinalV1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazHora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoFinalV1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazHora().setVisible(true);
+                new ProyectoFinalV1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
